@@ -28,9 +28,12 @@
   --Light-lavender: hsl(241, 100%, 89%);
   --Dark-gray-blue: hsl(224, 30%, 27%);
 }
-.container {
+body {
   width: 100vw;
-  height: 100vh;
+}
+.container {
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,4 +163,73 @@ button {
   border-radius: 50px;
   font-size: 18px;
   cursor: pointer;
+}
+button:hover {
+  background-image: linear-gradient(
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+}
+
+@media (max-width: 1250px) {
+  .main {
+    width: 60%;
+  }
+}
+/*media query for tablets */
+@media (max-width: 990px) {
+  .main {
+    width: 70%;
+  }
+  .left > h1 {
+    font-size: 22px;
+  }
+  .left > .circle > h1 {
+    font-size: 40px;
+  }
+  .left > .circle > p {
+    font-size: 15px;
+  }
+  .left h2 {
+    font-size: 26px;
+  }
+  .left > p {
+    font-size: 14px;
+  }
+  .subject > h3 {
+    font-size: 18px;
+  }
+  .subject > p {
+    font-size: 16px;
+  }
+}
+/*media query for mobiles */
+@media (max-width: 700px) {
+  .main {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .left {
+    padding: 30px 10%;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .left > h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  .left > .circle > h1 {
+    font-size: 45px;
+  }
+  .left > h2 {
+    font-size: 28px;
+  }
+  .left > p {
+    font-size: 18px;
+  }
+  .right {
+    padding: 30px 05%;
+    width: 100%;
+  }
 }
